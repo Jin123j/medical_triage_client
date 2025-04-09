@@ -2,22 +2,30 @@
 #define MAINWINDOW_H
 
 #include <QMainWindow>
+#include <QTcpSocket>
+#include <QAbstractSocket>  // 包含 QAbstractSocket 用于 SocketError
 
-QT_BEGIN_NAMESPACE
 namespace Ui {
 class MainWindow;
 }
-QT_END_NAMESPACE
 
 class MainWindow : public QMainWindow
 {
     Q_OBJECT
 
 public:
-    MainWindow(QWidget *parent = nullptr);
+    explicit MainWindow(QWidget *parent = nullptr);
     ~MainWindow();
+
+private slots:
+    void on_connectButton_clicked();
+    void on_sendButton_clicked();
+    void on_readyRead();  // 读取数据槽函数
+    void on_errorOccurred(QAbstractSocket::SocketError socketError);  // 错误处理槽函数
 
 private:
     Ui::MainWindow *ui;
+    QTcpSocket *tcpSocket;
 };
+
 #endif // MAINWINDOW_H
