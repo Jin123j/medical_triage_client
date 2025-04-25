@@ -1,0 +1,72 @@
+/* 主窗口样式 */
+QMainWindow {
+    background-color: #f0f8ff;
+}
+
+/* 按钮样式 */
+QPushButton {
+    background-color: #3498db;
+    color: white;
+    border-radius: 4px;
+    padding: 8px 15px;
+    font-size: 9pt;
+    min-width: 100px;
+    min-height: 20px;
+}
+
+QPushButton:hover {
+    background-color: #2980b9;
+}
+
+QPushButton:pressed {
+    background-color: #1a5276;
+}
+
+QPushButton#sendButton {
+    background-color: #2ecc71;
+}
+
+QPushButton#sendButton:hover {
+    background-color: #27ae60;
+}
+
+QPushButton#sendButton:pressed {
+    background-color: #1e8449;
+}
+
+QPushButton#connectButton {
+    background-color: #3498db;
+}
+
+QPushButton#connectButton:hover {
+    background-color: #2980b9;
+}
+
+QPushButton#connectButton:pressed {
+    background-color: #1a5276;
+}
+
+/* 输入框样式 */
+QLineEdit, QTextEdit {
+    border: 1px solid #bdc3c7;
+    border-radius: 4px;
+    padding: 6px;
+    background-color: white;
+    selection-background-color: #3498db;
+    selection-color: white;
+}
+
+QLineEdit:, QTextEdit:focus {
+    border: 1px solid #3498db;
+}
+
+/* 标签样式 */
+QLabel {
+    color: #2c3e50;
+}
+
+/* 窗口框架样式 */
+QMainWindow::separator {
+    background-color: #bdc3c7;
+    width: 1px;
+    height: 1px;

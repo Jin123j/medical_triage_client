@@ -1,0 +1,6 @@
+<RCC>
+    <qresource prefix="/">
+        <file>styles/medical.qss</file>
+        <file>icons/hospital.png</file>
+    </qresource>
+</RCC>
